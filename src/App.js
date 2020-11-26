@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import { createBrowserHistory } from 'history';
 import './index.css';
 import Layout from './components/Layout';
 import Home from './Pages/Home';
 import ObchodnePodmienky from './Pages/ObchodnePodmienky';
-import * as serviceWorker from './serviceWorker';
 import { Router, Route, Switch } from 'react-router-dom';
 import CookieConsent from 'react-cookie-consent';
 import ReactGA from 'react-ga';
@@ -15,7 +14,7 @@ const App = () => {
 
     // Initialize google analytics page view tracking
     history.listen((location) => {
-        ReactGA.initialize('your tracking Id');
+        ReactGA.initialize('G-KQ85GHF6KQ');
         ReactGA.set({ page: location.pathname }); // Update the user's current page
         ReactGA.pageview(location.pathname); // Record a pageview for the given page
     });
