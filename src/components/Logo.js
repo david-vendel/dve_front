@@ -1,13 +1,16 @@
 import React from 'react';
+import ConfettyComponent from './Confetty';
 
 const Logo = () => {
     return (
         <div
+            className="circle"
             style={{
                 padding: 20,
-                paddingLeft: 30,
                 position: 'absolute',
                 top: 0,
+                width: 102,
+                height: 102,
             }}
         >
             <img
@@ -19,6 +22,10 @@ const Logo = () => {
                     boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
                 }}
             />
+
+            <div style={{ position: 'absolute', bottom: 90, right: 60 }}>
+                <ConfettyComponent />
+            </div>
         </div>
     );
 };
