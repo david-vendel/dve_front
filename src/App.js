@@ -14,12 +14,12 @@ const App = () => {
     const history = createBrowserHistory();
 
     // Initialize google analytics page view tracking
-    history.listen((location) => {
-        console.log(location.pathname);
-        ReactGA.initialize('UA-164642885-2');
-        ReactGA.set({ page: location.pathname }); // Update the user's current page
-        ReactGA.pageview(location.pathname); // Record a pageview for the given page
-    });
+    // history.listen((location) => {
+    //     console.log(location.pathname);
+    //     ReactGA.initialize('UA-164642885-2');
+    //     ReactGA.set({ page: location.pathname }); // Update the user's current page
+    //     ReactGA.pageview(location.pathname); // Record a pageview for the given page
+    // });
 
     return (
         <Router history={history}>
