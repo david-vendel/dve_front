@@ -1,27 +1,44 @@
-import React, { Component } from "react";
-import "./App.css";
-import Image from "./components/Image"
-import Logo from "./components/Logo"
+import React, { Component } from 'react';
+import './App.css';
+import { createBrowserHistory } from 'history';
+import './index.css';
+import Layout from './components/Layout';
+import Home from './Pages/Home';
+import ObchodnePodmienky from './Pages/ObchodnePodmienky';
+import * as serviceWorker from './serviceWorker';
+import { Router, Route, Switch } from 'react-router-dom';
+import CookieConsent from 'react-cookie-consent';
+import ReactGA from 'react-ga';
 
-class App extends Component {
+const App = () => {
+    const history = createBrowserHistory();
 
-  render() {
+    // Initialize google analytics page view tracking
+    history.listen((location) => {
+        ReactGA.initialize('your tracking Id');
+        ReactGA.set({ page: location.pathname }); // Update the user's current page
+        ReactGA.pageview(location.pathname); // Record a pageview for the given page
+    });
+
     return (
-      <div className="App" style={{ position: "relative" }}>
-        <div style={{display: "flex", alignItems: "center", width: "100%", borderBottom: "1px solid", position: "fixed", backgroundColor:"white"}}>
-            <Logo />
-            <div style={{padding: 20, fontSize:30, fontFamily: 'Kalam' }}>
-                <link rel="preconnect" href="https://fonts.gstatic.com"/>
-                <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet"/>
-
-                Vítajú vás tu dve bodky.   </div>
-        </div>
-        <div style={{paddingTop: 206}}>
-            <Image />
-        </div>
-      </div>
+        <Router history={history}>
+            {/* <ScrollToTop /> */}
+            <CookieConsent buttonText="Rozumiem">
+                Tento web používa súbory cookies. Prechádzaním webu vyjadrujete
+                súhlas s ich používaním.
+            </CookieConsent>
+            <Layout>
+                <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route
+                        exact
+                        path="/obchodne-podmienky"
+                        component={ObchodnePodmienky}
+                    />
+                </Switch>
+            </Layout>
+        </Router>
     );
-  }
-}
+};
 
 export default App;
