@@ -17,14 +17,18 @@ const Layout = ({ children }) => {
                                 borderBottom: '1px solid',
                                 position: 'fixed',
                                 backgroundColor: 'white',
+                                zIndex: 10,
+                                maxHeight: 140,
                             }}
                         >
                             <Logo />
+                            <div style={{ flexGrow: 1, minWidth: 150 }}></div>
                             <div
                                 style={{
                                     padding: 10,
                                     fontSize: 30,
                                     fontFamily: 'Kalam',
+                                    flexGrow: 100,
                                 }}
                             >
                                 <link
@@ -37,12 +41,12 @@ const Layout = ({ children }) => {
                                 />
                                 Vítajú vás tu dve bodky.{' '}
                             </div>
+                            <div style={{ flexGrow: 1 }}></div>
                         </div>
                     </Link>
                 </div>
-                <div style={{ marginTop: 100 }}>{children}</div>
+                <div style={{ marginTop: 140 }}>{children}</div>
             </div>
-            {/* <div style={{ paddingTop: 206 }}></div> */}
             <Footer />
         </>
     );
