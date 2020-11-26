@@ -132,3 +132,19 @@ a:visited {
         left: 0;
     }
 }
+
+.obalka {
+    animation: slideUp 1000ms linear 1;
+
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+@keyframes slideUp {
+    0% {
+        top: 1000px;
+    }
+    100% {
+        top: 0;
+    }
+}

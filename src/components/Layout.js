@@ -46,7 +46,9 @@ const Layout = ({ children }) => {
                     </Link>
                 </div>
                 <div style={{ marginTop: 140 }}>
-                    <div style={{ padding: 30 }}>{children}</div>
+                    <div style={{ padding: 30, overflow: 'hidden' }}>
+                        {children}
+                    </div>
                 </div>
             </div>
             <Footer />
