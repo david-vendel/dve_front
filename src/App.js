@@ -5,6 +5,7 @@ import './index.css';
 import Layout from './components/Layout';
 import Home from './Pages/Home';
 import ObchodnePodmienky from './Pages/ObchodnePodmienky';
+import OchranaOsobnychUdajov from './Pages/OchranaOsobnychUdajov';
 import { Router, Route, Switch } from 'react-router-dom';
 import CookieConsent from 'react-cookie-consent';
 import ReactGA from 'react-ga';
@@ -14,7 +15,8 @@ const App = () => {
 
     // Initialize google analytics page view tracking
     history.listen((location) => {
-        ReactGA.initialize('G-KQ85GHF6KQ');
+        console.log(location.pathname);
+        ReactGA.initialize('UA-164642885-2');
         ReactGA.set({ page: location.pathname }); // Update the user's current page
         ReactGA.pageview(location.pathname); // Record a pageview for the given page
     });
@@ -33,6 +35,11 @@ const App = () => {
                         exact
                         path="/obchodne-podmienky"
                         component={ObchodnePodmienky}
+                    />
+                    <Route
+                        exact
+                        path="/ochrana-osobnych-udajov"
+                        component={OchranaOsobnychUdajov}
                     />
                 </Switch>
             </Layout>

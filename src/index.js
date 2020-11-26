@@ -1,14 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Layout from './components/Layout';
 import App from './App';
-import ObchodnePodmienky from './Pages/ObchodnePodmienky';
 import * as serviceWorker from './serviceWorker';
-import { Router, Route, Switch } from 'react-router-dom';
-import CookieConsent from 'react-cookie-consent';
-import { createBrowserHistory } from 'history';
-import ReactGA from 'react-ga';
 
 document.addEventListener(
     'keydown',
@@ -22,15 +16,6 @@ document.addEventListener(
         capture: true,
     }
 );
-
-// ReactGA.initialize('G-KQ85GHF6KQ', {
-//     debug: false,
-// });
-
-// history.listen((location) => {
-//     ReactGA.set({ page: location.pathname });
-//     ReactGA.pageview(location.pathname);
-// });
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
