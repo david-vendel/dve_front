@@ -21,6 +21,7 @@ const Logo = () => {
                     border: '1px solid',
                     boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
                 }}
+                alt=""
             />
 
             <div style={{ position: 'absolute', bottom: 90, right: 60 }}>

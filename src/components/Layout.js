@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from './Logo';
 import Obalka from './Obalka';
+import Kosik from './Kosik';
 import Footer from './Footer';
 import { Link } from 'react-router-dom';
 
@@ -42,9 +43,15 @@ const Layout = ({ children }) => {
                                 />
                                 Vítajú vás tu dve bodky.{' '}
                             </div>
-                            <div style={{}}>
+                            <div
+                                style={{
+                                    position: 'relative',
+                                    width: 80,
+                                    height: 60,
+                                }}
+                            >
                                 <Obalka />
-                                Košík
+                                <Kosik />
                             </div>
                         </div>
                     </Link>

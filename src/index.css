@@ -210,8 +210,11 @@ a:visited {
 
 .obalkaKosik {
     /* transform: scale(0.1); */
-    width: 80px;
-    height: 50px;
+    width: 60px;
+    height: 40px;
     padding-right: 15px;
-    padding-top: 15px;
+    padding-top: 10px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }

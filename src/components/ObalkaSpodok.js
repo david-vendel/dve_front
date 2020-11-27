@@ -15,6 +15,7 @@ const ObalkaSpodok = () => {
             <img
                 src="https://i.ibb.co/VxV461m/obalka-spodok-transparent.png"
                 style={{ width: '100%' }}
+                alt=""
             />
             <div
                 style={{

@@ -1,7 +1,7 @@
 import Confetti from 'react-dom-confetti';
 import React from 'react';
 
-const ConfettyComponent = ({}) => {
+const ConfettyComponent = () => {
     const [someProp, setSomeProp] = React.useState(false);
 
     setTimeout(() => {
@@ -21,9 +21,6 @@ const ConfettyComponent = ({}) => {
         perspective: '904px',
         colors: ['#a864fd', '#29cdff', '#78ff44', '#ff718d', '#fdff6a'],
     };
-    // return (
-    //     <div style={{ backgroundColor: 'red', width: 10, height: 10 }}>xxx</div>
-    // );
     return <Confetti active={someProp} config={config} />;
 };
 

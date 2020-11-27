@@ -9,16 +9,12 @@ const ObchodnePodmienky = () => {
             </p>
             <p>
                 Tieto obchodné podmienky platia pre nákup v internetovom obchode{' '}
-                <a href="http://www.dvebodky.sk" target="_blank" rel="noopener">
-                    www.dvebodky.sk{' '}
-                </a>
+                <a href="http://www.dvebodky.sk">www.dvebodky.sk </a>
                 (ďalej len „E-shop‘‘).
             </p>
             <p>
                 Predávajúcim a prevádzkovateľom internetového obchodu{' '}
-                <a href="http://www.dvebodky.sk" target="_blank" rel="noopener">
-                    www.dvebodky.sk{' '}
-                </a>
+                <a href="http://www.dvebodky.sk">www.dvebodky.sk </a>
                 (ďalej len „Predávajúci“) je:
             </p>
             <p>Dávid Vendel</p>
@@ -129,21 +125,17 @@ const ObchodnePodmienky = () => {
             <p>
                 <strong>Aktuálna ponuka tovaru</strong> - je ponuka tovaru
                 zverejnená na internetovej stránke{' '}
-                <a href="http://www.dvebodky.sk" target="_blank" rel="noopener">
-                    www.dvebodky.sk
-                </a>
-                , ktorá obsahuje najmä názov tovaru, textový popis tovaru,
-                ilustračnú fotografiu tovaru a informáciu o aktuálnej cene.
-                Zmeny aktuálnej ponuky tovaru (vrátane cenových zmien) sú účinné
-                od momentu ich zverejnenia na internetovej stránke{' '}
-                <a href="http://www.dvebodky.sk" target="_blank" rel="noopener">
-                    www.dvebodky.sk
-                </a>
-                . Na kúpne zmluvy uzavreté pred príslušnou zmenou aktuálnej
-                ponuky tovaru sa táto zmena nevzťahuje. Tovarom sú najmä
-                autorské diela, kresby, obrázky, komixy vo forme originálov,
-                ručných kópii a digitálnych kópii a drobné darčekové predmety
-                ako šálky, magnetky, oblečenie a iný tovar.
+                <a href="http://www.dvebodky.sk">www.dvebodky.sk</a>, ktorá
+                obsahuje najmä názov tovaru, textový popis tovaru, ilustračnú
+                fotografiu tovaru a informáciu o aktuálnej cene. Zmeny aktuálnej
+                ponuky tovaru (vrátane cenových zmien) sú účinné od momentu ich
+                zverejnenia na internetovej stránke{' '}
+                <a href="http://www.dvebodky.sk">www.dvebodky.sk</a>. Na kúpne
+                zmluvy uzavreté pred príslušnou zmenou aktuálnej ponuky tovaru
+                sa táto zmena nevzťahuje. Tovarom sú najmä autorské diela,
+                kresby, obrázky, komixy vo forme originálov, ručných kópii a
+                digitálnych kópii a drobné darčekové predmety ako šálky,
+                magnetky, oblečenie a iný tovar.
             </p>
             <h4>3. Uzatvorenie kúpnej zmluvy</h4>
             <p>
@@ -151,20 +143,16 @@ const ObchodnePodmienky = () => {
                 kupujúcemu objednaný tovar, dochádza na základe návrhu na
                 uzavretie kúpnej zmluvy (ktorým je záväzná objednávka Kupujúceho
                 cez internetový obchod{' '}
-                <a href="http://www.dvebodky.sk" target="_blank" rel="noopener">
-                    www.dvebodky.sk
-                </a>{' '}
-                ) a písomného prijatia návrhu na uzavretie zmluvy zo strany
+                <a href="http://www.dvebodky.sk">www.dvebodky.sk</a> ) a
+                písomného prijatia návrhu na uzavretie zmluvy zo strany
                 Predávajúceho.
             </p>
             <p>
                 <strong>Návrhom na uzavretie zmluvy</strong> je objednávka
                 Kupujúceho uskutočnená vyplnením objednávkového formuláru na
                 internetovej stránke{' '}
-                <a href="http://www.dvebodky.sk" target="_blank" rel="noopener">
-                    www.dvebodky.sk
-                </a>{' '}
-                a jeho odoslaním cez E-Shop.
+                <a href="http://www.dvebodky.sk">www.dvebodky.sk</a> a jeho
+                odoslaním cez E-Shop.
             </p>
             <p>
                 Súčasťou objednávky je vyhlásenie potvrdzujúce, že sa kupujúci
@@ -517,14 +505,10 @@ const ObchodnePodmienky = () => {
             </p>
             <p>
                 Pri uplatnení reklamácie je Kupujúci povinný postupovať podľa{' '}
-                <a href="/reklamacny-poriadok" target="_blank" rel="noopener">
-                    Reklamačného poriadku{' '}
-                </a>
+                <a href="/reklamacny-poriadok">Reklamačného poriadku </a>
                 internetového obchodu{' '}
-                <a href="http://www.dvebodky.sk" target="_blank" rel="noopener">
-                    www.dvebodky.sk
-                </a>{' '}
-                ktorý je uvedený{' '}
+                <a href="http://www.dvebodky.sk">www.dvebodky.sk</a> ktorý je
+                uvedený{' '}
                 <span>
                     <a
                         href="/reklamacny-poriadok"
@@ -761,9 +745,7 @@ const ObchodnePodmienky = () => {
                 Predávajúci si vyhradzuje právo na zmenu týchto obchodných
                 podmienok Akékoľvek zmeny týchto obchodných podmienok nadobúdajú
                 účinnosť dňom ich zverejnenia na internetovej stránke{' '}
-                <a href="http://www.dvebodky.sk" target="_blank" rel="noopener">
-                    www.dvebodky.sk
-                </a>
+                <a href="http://www.dvebodky.sk">www.dvebodky.sk</a>
             </p>
             <p>
                 Právne vzťahy založené kúpnou zmluvou sa budú riadiť
