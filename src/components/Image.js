@@ -1,17 +1,24 @@
 import React from 'react';
-import Obalka from '../components/Obalka';
+import ObalkaSpodok from './ObalkaSpodok';
+import Vrch from '../components/Vrch';
 
-const Image = ({ kupit }) => {
+const Image = ({ kupit, vrch, poslat }) => {
     return (
         <div
-            style={{
-                padding: 20,
-                marginRight: 20,
-                maxWidth: 500,
-                border: '1px solid',
-                position: 'relative',
-                boxShadow: '5px 10px #888888',
-            }}
+            style={
+                poslat
+                    ? {}
+                    : {
+                          padding: 20,
+                          marginRight: 20,
+                          maxWidth: 500,
+                          border: '1px solid',
+                          position: 'absolute',
+                          top: 0,
+                          right: 0,
+                          boxShadow: '5px 10px #888888',
+                      }
+            }
         >
             <div
                 title="Toto je náš úplne prvý produkt"
@@ -23,7 +30,7 @@ const Image = ({ kupit }) => {
                               borderRadius: 50,
                               width: 50,
                               height: 50,
-                              top: 240,
+                              top: 260,
                               left: 244,
                               backgroundColor: 'white',
                               display: 'flex',
@@ -58,7 +65,8 @@ const Image = ({ kupit }) => {
                 style={{ width: '100%' }}
             />
 
-            {kupit && <Obalka />}
+            {kupit && <ObalkaSpodok />}
+            {vrch && <Vrch />}
         </div>
     );
 };

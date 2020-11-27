@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from './Logo';
+import Obalka from './Obalka';
 import Footer from './Footer';
 import { Link } from 'react-router-dom';
 
@@ -41,7 +42,10 @@ const Layout = ({ children }) => {
                                 />
                                 Vítajú vás tu dve bodky.{' '}
                             </div>
-                            <div style={{ flexGrow: 1 }}></div>
+                            <div style={{}}>
+                                <Obalka />
+                                Košík
+                            </div>
                         </div>
                     </Link>
                 </div>

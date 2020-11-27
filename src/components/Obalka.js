@@ -1,33 +1,14 @@
 import React from 'react';
 
-const Image = () => {
+const Obalka = () => {
     return (
-        <div
-            style={{
-                width: 555,
-                position: 'absolute',
-                top: -5,
-                left: -5,
-                height: 600,
-            }}
-            className="obalka"
-        >
+        <div className="obalkaKosik">
             <img
-                src="https://i.ibb.co/VxV461m/obalka-spodok-transparent.png"
+                src="https://i.ibb.co/zHBqFs4/Kuvert-C6-114x162-mm-Frp-med-5-st-Natur-Local-Caption-Kuvert-C6-114x162-mm-Frp-med-5-st-Natur.jpg"
                 style={{ width: '100%' }}
             />
-            <div
-                style={{
-                    width: 555,
-                    position: 'absolute',
-                    top: 391,
-                    left: 0,
-                    height: 600,
-                    backgroundColor: 'white',
-                }}
-            ></div>
         </div>
     );
 };
 
-export default Image;
+export default Obalka;

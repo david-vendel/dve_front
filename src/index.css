@@ -148,3 +148,70 @@ a:visited {
         top: 0;
     }
 }
+
+@keyframes obalkaSpin {
+    from {
+        transform: rotateX(-90deg);
+
+        moz-transform: rotateX(270deg);
+        ms-transform: rotateX(270deg);
+    }
+    to {
+        transform: rotateX(0deg);
+        top: 0px;
+        moz-transform: rotateX(0deg);
+        ms-transform: rotateX(0deg);
+    }
+}
+@-webkit-keyframes obalkaSpin {
+    from {
+        -webkit-transform: rotateX(0deg);
+    }
+    to {
+        -webkit-transform: rotateX(180deg);
+    }
+}
+@keyframes moveDown {
+    from {
+        top: -150px;
+    }
+    to {
+        top: -5px;
+    }
+}
+
+.imageSpin {
+    animation-name: obalkaSpin;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    -webkit-animation-name: obalkaSpin;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-duration: 2s;
+}
+
+.imageMoveDown {
+    animation-name: moveDown;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+}
+
+@media only screen and (min-width: 960px) {
+    .home {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+}
+
+.obalkaKosik {
+    /* transform: scale(0.1); */
+    width: 80px;
+    height: 50px;
+    padding-right: 15px;
+    padding-top: 15px;
+}
