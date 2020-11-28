@@ -8,15 +8,16 @@ const Home = (props) => {
     const [number, setNumber] = React.useState(1);
     const [kupit, setKupit] = React.useState(false);
     const [vrch, setVrch] = React.useState(false);
-    const [poslat, setPoslat] = React.useState(false);
+    const [obrazok, setObrazok] = React.useState(true);
 
     React.useEffect(() => {
         nastavit();
-    }, [imageRef]);
+    }, [imageRef.current]);
 
     const nastavit = () => {
+        console.log('imageRef', imageRef);
         console.log(
-            'imageRef',
+            'HOME imageRef',
 
             imageRef.current.offsetTop,
             imageRef.current.scrollTop,
@@ -27,20 +28,54 @@ const Home = (props) => {
         const x = imageRef.current.getBoundingClientRect().left;
         const y = imageRef.current.getBoundingClientRect().top;
 
-        if (props.value.x !== x) props.value.setX(x);
-        if (props.value.y !== y) props.value.setY(y);
+        props.value.setXHome(x);
+        props.value.setYHome(y);
+        // if (props.value.x !== x) props.value.setX(x);
+        // if (props.value.y !== y) props.value.setY(y);
     };
 
-    const odoslat = () => {
-        console.log('odoslat');
-        props.value.setOdoslat(true);
+    React.useEffect(() => {
+        const step = props.value.step;
+        console.log('Obalka, props value step changed', step, typeof step);
 
-        setTimeout(() => {
+        if (step === 3) {
+            setObrazok(false);
+        }
+
+        if (step === 4) {
+            console.log('>>> step is 3', step);
             setKupit(false);
             setVrch(false);
-            setPoslat(false);
-            setNumber(1);
-        }, 1100);
+        }
+
+        if (step === 6) {
+            // setKupit(true);
+            // setVrch(true);
+            setObrazok(true);
+        }
+    }, [props.value.step]);
+
+    const startProcess = () => {
+        setKupit(true);
+        setTimeout(() => {
+            setVrch(true);
+            props.value.setStep(1);
+        }, 1000);
+        setTimeout(() => {
+            props.value.setStep(2);
+        }, 3000);
+        setTimeout(() => {
+            props.value.setStep(3);
+        }, 3050);
+        setTimeout(() => {
+            props.value.setStep(4);
+        }, 4050);
+        setTimeout(() => {
+            props.value.setStep(5);
+        }, 5100);
+        setTimeout(() => {
+            props.value.setStep(6);
+        }, 7100);
     };
 
     return (
@@ -49,7 +84,7 @@ const Home = (props) => {
                 style={{ width: 550, height: 550, position: 'relative' }}
                 ref={imageRef}
             >
-                <Image kupit={kupit} vrch={vrch} poslat={poslat} />
+                <Image kupit={kupit} vrch={vrch} obrazok={obrazok} />
             </div>
             <div style={{ marginLeft: 20 }}>
                 <div style={{ marginBottom: 20, fontSize: 25 }}>
@@ -110,14 +145,7 @@ const Home = (props) => {
                             fontSize: '1.5rem',
                         }}
                         onClick={() => {
-                            setKupit(true);
-                            setTimeout(() => {
-                                setVrch(true);
-                            }, 1000);
-                            setTimeout(() => {
-                                setPoslat(true);
-                                odoslat();
-                            }, 3500);
+                            startProcess();
                         }}
                     >
                         Kúpiť

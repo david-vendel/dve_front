@@ -12,11 +12,17 @@ class StackContextProvider extends Component {
                     console.log('close modal');
                 },
             },
-            x: 0,
-            y: 0,
+            xHome: 0,
+            yHome: 0,
+            xKosik: 0,
+            yKosik: 0,
             odoslat: false,
-            setX: this.setX,
-            setY: this.setY,
+            step: 0,
+            setStep: this.setStep,
+            setXHome: this.setXHome,
+            setYHome: this.setYHome,
+            setXKosik: this.setXKosik,
+            setYKosik: this.setYKosik,
             addNotification: this.addNotification,
             setOdoslat: this.setOdoslat,
         };
@@ -48,19 +54,36 @@ class StackContextProvider extends Component {
         });
     };
 
-    setX = (x) => {
+    setXKosik = (x) => {
         this.setState({
-            x,
+            xKosik: x,
         });
     };
-    setY = (y) => {
+    setYKosik = (y) => {
         this.setState({
-            y,
+            yKosik: y,
         });
     };
+
+    setXHome = (x) => {
+        this.setState({
+            xHome: x,
+        });
+    };
+    setYHome = (y) => {
+        this.setState({
+            yHome: y,
+        });
+    };
+
     setOdoslat = (y) => {
         this.setState({
             odoslat: true,
+        });
+    };
+    setStep = (step) => {
+        this.setState({
+            step,
         });
     };
 

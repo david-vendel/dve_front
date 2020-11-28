@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 const Layout = ({ children }) => {
     return (
         <>
+            <Obalka />
             <div className="content">
                 <div>
                     <Link to="/">
@@ -50,7 +51,6 @@ const Layout = ({ children }) => {
                                     height: 60,
                                 }}
                             >
-                                <Obalka />
                                 <Kosik />
                             </div>
                         </div>

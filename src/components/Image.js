@@ -2,25 +2,30 @@ import React from 'react';
 import ObalkaSpodok from './ObalkaSpodok';
 import Vrch from '../components/Vrch';
 
-const Image = ({ kupit, vrch, poslat }) => {
+const Image = ({ kupit, vrch, obrazok }) => {
     const [opacity, setOpacity] = React.useState(1);
 
-    React.useEffect(() => {
-        if (poslat) {
-            console.log('IMAGE poslat');
-            setTimeout(() => {
-                setOpacity(0);
-            }, 1100);
+    // React.useEffect(() => {
+    //     if (poslat) {
+    //         console.log('IMAGE poslat');
+    //         setTimeout(() => {
+    //             setOpacity(0);
+    //         }, 1100);
 
-            setTimeout(() => {
-                setOpacity(1);
-            }, 3100);
-        }
-    }, [poslat]);
+    //         setTimeout(() => {
+    //             setOpacity(1);
+    //         }, 3100);
+    //     }
+    // }, [poslat]);
 
+    console.log('image', kupit, vrch);
     // if (hidden === 'hidden') {
     //     return null;
     // }
+
+    React.useEffect(() => {
+        setOpacity(obrazok ? 1 : 0);
+    }, [obrazok]);
     return (
         <div
             style={{

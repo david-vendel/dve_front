@@ -4,10 +4,10 @@ const Vrch = () => {
     return (
         <div
             style={{
-                width: 555,
+                width: 550,
                 position: 'absolute',
-                top: -5,
-                left: -5,
+                top: -1,
+                left: -1,
                 height: 600,
             }}
             className="imageMoveDown"
