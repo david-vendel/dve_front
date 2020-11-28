@@ -4,10 +4,10 @@ const Vrch = () => {
     return (
         <div
             style={{
-                width: 555,
+                width: 550,
                 position: 'absolute',
-                top: -5,
-                left: -5,
+                top: -1,
+                left: -1,
                 height: 600,
             }}
             className="imageMoveDown"
@@ -16,6 +16,7 @@ const Vrch = () => {
                 src="https://i.ibb.co/S7ZbF8K/obalka-vrch-transparent.png"
                 style={{ width: '100%' }}
                 className="imageSpin"
+                alt=""
             />
         </div>
     );

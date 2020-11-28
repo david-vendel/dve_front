@@ -4,10 +4,10 @@ const ObalkaSpodok = () => {
     return (
         <div
             style={{
-                width: 555,
+                width: 550,
                 position: 'absolute',
-                top: -5,
-                left: -5,
+                top: -1,
+                left: -1,
                 height: 600,
             }}
             className="obalka"
@@ -15,13 +15,14 @@ const ObalkaSpodok = () => {
             <img
                 src="https://i.ibb.co/VxV461m/obalka-spodok-transparent.png"
                 style={{ width: '100%' }}
+                alt=""
             />
             <div
                 style={{
-                    width: 555,
+                    width: 550,
                     position: 'absolute',
-                    top: 391,
-                    left: 0,
+                    top: 388,
+                    left: -1,
                     height: 600,
                     backgroundColor: 'white',
                 }}

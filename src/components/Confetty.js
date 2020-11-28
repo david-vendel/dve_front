@@ -1,12 +1,32 @@
 import Confetti from 'react-dom-confetti';
 import React from 'react';
+import { withStackContext } from './../utils/StackProvider';
 
-const ConfettyComponent = ({}) => {
-    const [someProp, setSomeProp] = React.useState(false);
+const ConfettyComponent = (props) => {
+    const [start, setStart] = React.useState(false);
 
-    setTimeout(() => {
-        setSomeProp(true);
-    }, 3000);
+    React.useEffect(() => {
+        setTimeout(() => {
+            setStart(true);
+        }, 3000);
+        setTimeout(() => {
+            setStart(false);
+        }, 3100);
+    }, []);
+
+    React.useEffect(() => {
+        const step = props.value.step;
+        console.log('Confetty', step, typeof step);
+
+        if (step === 4) {
+            setTimeout(() => {
+                setStart(true);
+            }, 500);
+            setTimeout(() => {
+                setStart(false);
+            }, 800);
+        }
+    }, [props.value.step]);
 
     const config = {
         angle: '222',
@@ -21,10 +41,7 @@ const ConfettyComponent = ({}) => {
         perspective: '904px',
         colors: ['#a864fd', '#29cdff', '#78ff44', '#ff718d', '#fdff6a'],
     };
-    // return (
-    //     <div style={{ backgroundColor: 'red', width: 10, height: 10 }}>xxx</div>
-    // );
-    return <Confetti active={someProp} config={config} />;
+    return <Confetti active={start} config={config} />;
 };
 
-export default ConfettyComponent;
+export default withStackContext(ConfettyComponent);
