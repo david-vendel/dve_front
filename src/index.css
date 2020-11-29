@@ -20,6 +20,7 @@ html {
 }
 .content {
     flex: 1 0 auto;
+    overflow: hidden;
 }
 .footer {
     flex-shrink: 0;
@@ -198,14 +199,14 @@ a:visited {
     animation-duration: 2s;
 }
 
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 640px) {
     .home {
         display: flex;
         justify-content: center;
     }
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 640px) {
 }
 
 .obalkaKosik {
@@ -214,4 +215,14 @@ a:visited {
     height: 50px;
     padding-right: 15px;
     padding-top: 15px;
+}
+
+.homeInfo {
+    margin-left: 20px;
+}
+
+@media only screen and (max-width: 640px) {
+    .homeInfo {
+        margin-top: 30px;
+    }
 }

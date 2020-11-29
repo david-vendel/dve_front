@@ -14,6 +14,8 @@ class StackContextProvider extends Component {
             },
             xHome: 0,
             yHome: 0,
+            wHome: 0,
+            hHome: 0,
             xKosik: 0,
             yKosik: 0,
             odoslat: false,
@@ -21,6 +23,8 @@ class StackContextProvider extends Component {
             setStep: this.setStep,
             setXHome: this.setXHome,
             setYHome: this.setYHome,
+            setWHome: this.setWHome,
+            setHHome: this.setHHome,
             setXKosik: this.setXKosik,
             setYKosik: this.setYKosik,
             addNotification: this.addNotification,
@@ -75,6 +79,16 @@ class StackContextProvider extends Component {
             yHome: y,
         });
     };
+    setWHome = (w) => {
+        this.setState({
+            wHome: w,
+        });
+    };
+    setHHome = (h) => {
+        this.setState({
+            hHome: h,
+        });
+    };
 
     setOdoslat = (y) => {
         this.setState({
@@ -104,13 +118,11 @@ export function withStackContext(Component) {
             <StackContext.Consumer>
                 {(value) => {
                     return (
-                        <div style={{ position: 'relative' }}>
-                            <Component
-                                {...props}
-                                thisIsStack={true}
-                                value={value}
-                            />
-                        </div>
+                        <Component
+                            {...props}
+                            thisIsStack={true}
+                            value={value}
+                        />
                     );
                 }}
             </StackContext.Consumer>

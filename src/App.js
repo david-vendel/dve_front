@@ -17,10 +17,10 @@ const App = () => {
         <StackContextProvider>
             <Router history={history}>
                 {/* <ScrollToTop /> */}
-                <CookieConsent buttonText="Rozumiem">
+                {/* <CookieConsent buttonText="Rozumiem">
                     Tento web používa súbory cookies. Prechádzaním webu
                     vyjadrujete súhlas s ich používaním.
-                </CookieConsent>
+                </CookieConsent> */}
                 <Layout>
                     <Switch>
                         <Route exact path="/" component={Home} />

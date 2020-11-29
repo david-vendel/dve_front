@@ -39,9 +39,9 @@ const Image = ({ kupit, vrch, obrazok }) => {
                     marginRight: 20,
                     maxWidth: 500,
                     border: '1px solid',
-                    position: 'absolute',
-                    top: 0,
-                    right: 0,
+                    // position: 'absolute',
+                    // top: 0,
+                    // right: 0,
                     boxShadow: '5px 10px #888888',
                 }}
             >
@@ -90,10 +90,10 @@ const Image = ({ kupit, vrch, obrazok }) => {
                     style={{ width: '100%' }}
                     alt=""
                 />
-
-                {kupit && <ObalkaSpodok />}
-                {vrch && <Vrch />}
             </div>
+
+            {kupit && <ObalkaSpodok />}
+            {vrch && <Vrch />}
         </div>
     );
 };

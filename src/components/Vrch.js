@@ -4,7 +4,7 @@ const Vrch = () => {
     return (
         <div
             style={{
-                width: 550,
+                width: '100%',
                 position: 'absolute',
                 top: -1,
                 left: -1,

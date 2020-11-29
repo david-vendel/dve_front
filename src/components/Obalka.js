@@ -20,7 +20,7 @@ const Obalka = (props) => {
         if (step === 1) {
             setPositionX(props.value.xHome);
             setPositionY(props.value.yHome);
-            setMyWidth(550);
+            setMyWidth(props.value.wHome);
         }
         if (step === 2) {
             setHidden('visible');
@@ -30,7 +30,7 @@ const Obalka = (props) => {
         }
         if (step === 5) {
             setPositionX(props.value.xKosik);
-            setPositionY(props.value.yKosik);
+            setPositionY(props.value.yKosik + window.pageYOffset);
             setMyWidth(55);
         }
         if (step === 6) {
@@ -86,8 +86,8 @@ const Obalka = (props) => {
                 ref={kosikRef}
                 style={{
                     position: 'absolute',
-                    left: positionX,
-                    top: positionY,
+                    left: positionX - 1,
+                    top: positionY - 1,
                     width: myWidth,
                     visibility: hidden,
                     transition: 'all 1s ease',
@@ -110,6 +110,7 @@ const Obalka = (props) => {
                         top: '50%',
                         width: stampWidth,
                         transition: 'all 1s ease',
+                        transitionProperty: 'width, top, left',
                         opacity: 0.77,
                     }}
                 />

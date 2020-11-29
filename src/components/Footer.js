@@ -22,7 +22,7 @@ const Footer = (props) => {
                 Obchodné podmienky
             </Link>
 
-            {/* <button
+            <button
                 onClick={() => {
                     setStep(0);
                 }}
@@ -36,7 +36,7 @@ const Footer = (props) => {
                 }}
             >
                 next
-            </button> */}
+            </button>
         </div>
     );
 };

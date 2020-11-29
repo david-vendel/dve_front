@@ -15,24 +15,32 @@ const Home = (props) => {
     }, [imageRef.current]);
 
     const nastavit = () => {
-        console.log('imageRef', imageRef);
-        console.log(
-            'HOME imageRef',
+        try {
+            const x = imageRef.current.getBoundingClientRect().left;
+            const y = imageRef.current.getBoundingClientRect().top;
+            const w = imageRef.current.offsetWidth;
+            const h = imageRef.current.offsetHeight;
 
-            imageRef.current.offsetTop,
-            imageRef.current.scrollTop,
-            imageRef.current.getBoundingClientRect().top,
-            imageRef.current.getBoundingClientRect().left
-        );
-
-        const x = imageRef.current.getBoundingClientRect().left;
-        const y = imageRef.current.getBoundingClientRect().top;
-
-        props.value.setXHome(x);
-        props.value.setYHome(y);
-        // if (props.value.x !== x) props.value.setX(x);
-        // if (props.value.y !== y) props.value.setY(y);
+            console.log('w, h', w, h);
+            props.value.setXHome(x);
+            props.value.setYHome(y);
+            props.value.setWHome(w);
+            props.value.setHHome(h);
+        } catch (e) {
+            // console.error('nastavit failed');
+            // setTimeout(() => {
+            //     nastavit();
+            // }, 1000);
+        }
     };
+
+    // React.useEffect(() => {
+    //     window.addEventListener('resize', nastavit);
+    //     // Specify how to clean up after this effect:
+    //     return function cleanup() {
+    //         window.removeEventListener('resize', nastavit);
+    //     };
+    // }, []);
 
     React.useEffect(() => {
         const step = props.value.step;
@@ -43,7 +51,6 @@ const Home = (props) => {
         }
 
         if (step === 4) {
-            console.log('>>> step is 3', step);
             setKupit(false);
             setVrch(false);
         }
@@ -80,13 +87,10 @@ const Home = (props) => {
 
     return (
         <div className="home">
-            <div
-                style={{ width: 550, height: 550, position: 'relative' }}
-                ref={imageRef}
-            >
+            <div style={{ position: 'relative' }} ref={imageRef}>
                 <Image kupit={kupit} vrch={vrch} obrazok={obrazok} />
             </div>
-            <div style={{ marginLeft: 20 }}>
+            <div className="homeInfo">
                 <div style={{ marginBottom: 20, fontSize: 25 }}>
                     Obrázok Dve Bodky: Mâm radšej teba
                 </div>
