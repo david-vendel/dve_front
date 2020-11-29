@@ -9,6 +9,7 @@ const Obalka = (props) => {
     const [myWidth, setMyWidth] = React.useState(55);
     const [hidden, setHidden] = React.useState('hidden');
     const [stampWidth, setStampWidth] = React.useState('2000%');
+    const [zIndex, setZIndex] = React.useState(5);
 
     React.useEffect(() => {
         const step = props.value.step;
@@ -32,6 +33,7 @@ const Obalka = (props) => {
             setPositionX(props.value.xKosik);
             setPositionY(props.value.yKosik + window.pageYOffset);
             setMyWidth(55);
+            setZIndex(15);
 
             setTimeout(() => {
                 // setPositionX(props.value.xKosik + 14);
@@ -43,6 +45,7 @@ const Obalka = (props) => {
         if (step === 6) {
             setTimeout(() => {
                 setStampWidth('2000%');
+                setZIndex(5);
             }, 1000);
         }
     }, [props.value.step]);
@@ -98,7 +101,7 @@ const Obalka = (props) => {
                     visibility: hidden,
                     transition: 'all 1s ease',
                     transitionProperty: 'width, top, left',
-                    zIndex: 5,
+                    zIndex: zIndex,
                     overflow: 'hidden',
                 }}
             >

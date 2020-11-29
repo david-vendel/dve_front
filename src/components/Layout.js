@@ -21,17 +21,17 @@ const Layout = ({ children }) => {
                                 position: 'fixed',
                                 zIndex: 10,
                                 maxHeight: 140,
+                                backgroundColor: 'white',
                             }}
                         >
                             <Logo />
-                            <div style={{ flexGrow: 1, minWidth: 150 }}></div>
+                            <div style={{ width: 142, height: 100 }}></div>
                             <div
                                 style={{
                                     padding: 10,
-                                    fontSize: 30,
                                     fontFamily: 'Kalam',
-                                    flexGrow: 100,
                                 }}
+                                className="welcome"
                             >
                                 <link
                                     rel="preconnect"

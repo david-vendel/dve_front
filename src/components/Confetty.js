@@ -21,10 +21,10 @@ const ConfettyComponent = (props) => {
         if (step === 4) {
             setTimeout(() => {
                 setStart(true);
-            }, 500);
+            }, 5);
             setTimeout(() => {
                 setStart(false);
-            }, 800);
+            }, 300);
         }
     }, [props.value.step]);
 

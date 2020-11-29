@@ -37,7 +37,7 @@ const Image = ({ kupit, vrch, obrazok }) => {
                 style={{
                     padding: 20,
                     marginRight: 7,
-                    maxWidth: 500,
+                    // maxWidth: 500,
                     border: '1px solid',
                     // position: 'absolute',
                     // top: 0,

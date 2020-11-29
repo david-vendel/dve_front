@@ -12,14 +12,18 @@ const Home = (props) => {
 
     React.useEffect(() => {
         nastavit();
-    }, [imageRef.current]);
+    }, []);
 
     const nastavit = () => {
         try {
             const x = imageRef.current.getBoundingClientRect().left;
             const y = imageRef.current.getBoundingClientRect().top;
-            const w = imageRef.current.offsetWidth;
-            const h = imageRef.current.offsetHeight;
+            const w = imageRef.current.clientWidth;
+            let h = imageRef.current.clientHeight;
+
+            if (Math.abs(h - w) > 20) {
+                h = w - 3;
+            }
 
             console.log('w, h', w, h);
             props.value.setXHome(x);
@@ -27,7 +31,7 @@ const Home = (props) => {
             props.value.setWHome(w);
             props.value.setHHome(h);
         } catch (e) {
-            console.error('nastavit failed');
+            console.error('nastavit failed', e);
             // setTimeout(() => {
             //     nastavit();
             // }, 1000);
@@ -93,7 +97,11 @@ const Home = (props) => {
 
     return (
         <div className="home">
-            <div style={{ position: 'relative' }} ref={imageRef}>
+            <div
+                style={{ position: 'relative' }}
+                className="homeImage"
+                ref={imageRef}
+            >
                 <Image kupit={kupit} vrch={vrch} obrazok={obrazok} />
             </div>
             <div className="homeInfo">
