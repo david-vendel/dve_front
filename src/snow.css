@@ -126,7 +126,7 @@ body {
 }
 
 .cloudMoves {
-    animation: moves 60s linear 0s infinite alternate;
+    animation: moves 120s linear -15s infinite alternate;
 }
 @keyframes moves {
     0% {
