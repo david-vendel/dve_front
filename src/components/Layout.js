@@ -4,6 +4,7 @@ import Obalka from './Obalka';
 import Kosik from './Kosik';
 import Footer from './Footer';
 import { Link } from 'react-router-dom';
+import Snow from './Snow';
 
 const Layout = ({ children }) => {
     return (
@@ -26,6 +27,16 @@ const Layout = ({ children }) => {
                         >
                             <Logo />
                             <div style={{ width: 142, height: 100 }}></div>
+                            <div
+                                style={{
+                                    position: 'absolute',
+                                    height: 50,
+                                    width: 120,
+                                }}
+                                className="cloudMoves"
+                            >
+                                <Snow />
+                            </div>
                             <div
                                 style={{
                                     padding: 10,
