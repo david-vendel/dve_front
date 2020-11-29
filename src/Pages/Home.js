@@ -55,6 +55,12 @@ const Home = (props) => {
             setVrch(false);
         }
 
+        if (step === 5) {
+            setTimeout(() => {
+                props.value.setKosikPocet(props.value.kosikPocet + number);
+            }, 1900);
+        }
+
         if (step === 6) {
             // setKupit(true);
             // setVrch(true);
@@ -62,7 +68,7 @@ const Home = (props) => {
         }
     }, [props.value.step]);
 
-    const startProcess = () => {
+    const startBuyProcess = () => {
         setKupit(true);
         setTimeout(() => {
             setVrch(true);
@@ -149,7 +155,7 @@ const Home = (props) => {
                             fontSize: '1.5rem',
                         }}
                         onClick={() => {
-                            startProcess();
+                            startBuyProcess();
                         }}
                     >
                         Kúpiť

@@ -65,6 +65,45 @@ const Kosik = (props) => {
                 className="kosikImgFront"
                 style={{ zIndex: 2 }}
             ></img>
+
+            {props.value.kosikPocet ? (
+                <div style={{ position: 'absolute' }} className="kosikPocet">
+                    {props.value.kosikPocet}
+                </div>
+            ) : null}
+
+            <div
+                style={{
+                    position: 'absolute',
+                    width: 55,
+                    zIndex: 1,
+                    visibility: props.value.kosikPocet ? 'visible' : 'hidden',
+                    top: 25,
+                    left: 30,
+                    transition: 'all 1s ease',
+                    transitionProperty: 'width, top, left',
+                }}
+                className="obalkaVKosiku"
+            >
+                <img
+                    src="https://i.ibb.co/zHBqFs4/Kuvert-C6-114x162-mm-Frp-med-5-st-Natur-Local-Caption-Kuvert-C6-114x162-mm-Frp-med-5-st-Natur.jpg"
+                    style={{ width: '100%' }}
+                    alt=""
+                />
+
+                <img
+                    src="https://www.nicepng.com/png/full/100-1006778_seal-of-approval-png.png"
+                    style={{
+                        position: 'absolute',
+                        left: '38%',
+                        top: '50%',
+                        width: '26%',
+                        transition: 'all 1s ease',
+                        transitionProperty: 'width, top, left',
+                        opacity: 0.47,
+                    }}
+                />
+            </div>
             <div
                 style={{
                     position: 'absolute',

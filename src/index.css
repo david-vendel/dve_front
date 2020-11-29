@@ -244,3 +244,13 @@ a:visited {
     margin-right: 10px;
     position: relative;
 }
+
+.kosikPocet {
+    color: seashell;
+    position: absolute;
+    top: 30px;
+    left: 52px;
+    z-index: 5;
+    font-size: 24px;
+    font-weight: 500;
+}
