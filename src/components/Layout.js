@@ -19,7 +19,6 @@ const Layout = ({ children }) => {
                                 width: '100%',
                                 borderBottom: '1px solid',
                                 position: 'fixed',
-                                backgroundColor: 'white',
                                 zIndex: 10,
                                 maxHeight: 140,
                             }}
@@ -44,15 +43,7 @@ const Layout = ({ children }) => {
                                 />
                                 Vítajú vás tu dve bodky.{' '}
                             </div>
-                            <div
-                                style={{
-                                    position: 'relative',
-                                    width: 80,
-                                    height: 60,
-                                }}
-                            >
-                                <Kosik />
-                            </div>
+                            <Kosik />
                         </div>
                     </Link>
                 </div>

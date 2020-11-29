@@ -218,11 +218,29 @@ a:visited {
 }
 
 .homeInfo {
-    margin-left: 20px;
+    margin-left: 35px;
 }
 
 @media only screen and (max-width: 640px) {
     .homeInfo {
         margin-top: 30px;
     }
+}
+
+.kosikImg {
+    position: absolute;
+}
+.kosikImgFront {
+    position: absolute;
+    width: 100px;
+    height: 90px;
+    margin-top: 6px;
+}
+
+.kosikDiv {
+    width: 100px;
+    height: 60px;
+    margin-top: 10px;
+    margin-right: 10px;
+    position: relative;
 }

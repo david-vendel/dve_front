@@ -27,7 +27,7 @@ const Home = (props) => {
             props.value.setWHome(w);
             props.value.setHHome(h);
         } catch (e) {
-            // console.error('nastavit failed');
+            console.error('nastavit failed');
             // setTimeout(() => {
             //     nastavit();
             // }, 1000);
@@ -79,7 +79,7 @@ const Home = (props) => {
         }, 4050);
         setTimeout(() => {
             props.value.setStep(5);
-        }, 5100);
+        }, 4500);
         setTimeout(() => {
             props.value.setStep(6);
         }, 7100);

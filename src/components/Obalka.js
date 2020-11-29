@@ -32,9 +32,15 @@ const Obalka = (props) => {
             setPositionX(props.value.xKosik);
             setPositionY(props.value.yKosik + window.pageYOffset);
             setMyWidth(55);
+
+            setTimeout(() => {
+                // setPositionX(props.value.xKosik + 14);
+                // setPositionY(props.value.yKosik + window.pageYOffset + 30);
+                // setMyWidth(40);
+                setHidden('hidden');
+            }, 1000);
         }
         if (step === 6) {
-            setHidden('hidden');
             setTimeout(() => {
                 setStampWidth('2000%');
             }, 1000);
@@ -81,7 +87,7 @@ const Obalka = (props) => {
     // }, [kosikRef, props.value.y, props.value.x, props.value.odoslat]);
 
     return (
-        <>
+        <div>
             <div
                 ref={kosikRef}
                 style={{
@@ -92,7 +98,7 @@ const Obalka = (props) => {
                     visibility: hidden,
                     transition: 'all 1s ease',
                     transitionProperty: 'width, top, left',
-                    zIndex: 100,
+                    zIndex: 5,
                     overflow: 'hidden',
                 }}
             >
@@ -115,7 +121,7 @@ const Obalka = (props) => {
                     }}
                 />
             </div>
-        </>
+        </div>
     );
 };
 
