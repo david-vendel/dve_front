@@ -12,51 +12,54 @@ const Layout = ({ children }) => {
             <Obalka />
             <div className="content">
                 <div>
-                    <Link to="/">
+                    <div
+                        style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            width: '100%',
+                            borderBottom: '1px solid',
+                            position: 'fixed',
+                            zIndex: 10,
+                            maxHeight: 140,
+                            backgroundColor: 'white',
+                        }}
+                    >
+                        <Link to="/">
+                            <Logo />
+                        </Link>
+
+                        <div style={{ width: 142, height: 100 }}></div>
                         <div
                             style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                width: '100%',
-                                borderBottom: '1px solid',
-                                position: 'fixed',
-                                zIndex: 10,
-                                maxHeight: 140,
-                                backgroundColor: 'white',
+                                position: 'absolute',
+                                height: 50,
+                                width: 120,
                             }}
+                            className="cloudMoves"
                         >
-                            <Logo />
-                            <div style={{ width: 142, height: 100 }}></div>
-                            <div
-                                style={{
-                                    position: 'absolute',
-                                    height: 50,
-                                    width: 120,
-                                }}
-                                className="cloudMoves"
-                            >
-                                <Snow />
-                            </div>
-                            <div
-                                style={{
-                                    padding: 10,
-                                    fontFamily: 'Kalam',
-                                }}
-                                className="welcome"
-                            >
-                                <link
-                                    rel="preconnect"
-                                    href="https://fonts.gstatic.com"
-                                />
-                                <link
-                                    href="https://fonts.googleapis.com/css2?family=Kalam&display=swap"
-                                    rel="stylesheet"
-                                />
-                                Vítajú vás tu dve bodky.{' '}
-                            </div>
-                            <Kosik />
+                            <Snow />
                         </div>
-                    </Link>
+                        <div
+                            style={{
+                                padding: 10,
+                                fontFamily: 'Kalam',
+                            }}
+                            className="welcome"
+                        >
+                            <link
+                                rel="preconnect"
+                                href="https://fonts.gstatic.com"
+                            />
+                            <link
+                                href="https://fonts.googleapis.com/css2?family=Kalam&display=swap"
+                                rel="stylesheet"
+                            />
+                            Vítajú vás tu dve bodky.{' '}
+                        </div>
+                        <Link to="/kosik">
+                            <Kosik />
+                        </Link>
+                    </div>
                 </div>
                 <div style={{ marginTop: 140 }}>
                     <div style={{ padding: 30 }}>{children}</div>

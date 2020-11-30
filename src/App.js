@@ -4,7 +4,7 @@ import { createBrowserHistory } from 'history';
 import './index.css';
 import Layout from './components/Layout';
 import Home from './Pages/Home';
-import Kosik from './Pages/Kosik';
+import KosikPage from './Pages/KosikPage';
 import ObchodnePodmienky from './Pages/ObchodnePodmienky';
 import OchranaOsobnychUdajov from './Pages/OchranaOsobnychUdajov';
 import { Router, Route, Switch } from 'react-router-dom';
@@ -25,7 +25,7 @@ const App = () => {
                 <Layout>
                     <Switch>
                         <Route exact path="/" component={Home} />
-                        <Route exact path="/kosik" component={Kosik} />
+                        <Route exact path="/kosik" component={KosikPage} />
                         <Route
                             exact
                             path="/obchodne-podmienky"

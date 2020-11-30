@@ -3,6 +3,8 @@ import Image from '../components/Image';
 import Button from '@material-ui/core/Button';
 import { withStackContext } from './../utils/StackProvider';
 
+const CENA = 20;
+
 const Home = (props) => {
     const imageRef = React.createRef();
     const [number, setNumber] = React.useState(1);
@@ -32,19 +34,8 @@ const Home = (props) => {
             props.value.setHHome(h);
         } catch (e) {
             console.error('nastavit failed', e);
-            // setTimeout(() => {
-            //     nastavit();
-            // }, 1000);
         }
     };
-
-    // React.useEffect(() => {
-    //     window.addEventListener('resize', nastavit);
-    //     // Specify how to clean up after this effect:
-    //     return function cleanup() {
-    //         window.removeEventListener('resize', nastavit);
-    //     };
-    // }, []);
 
     React.useEffect(() => {
         const step = props.value.step;
@@ -62,6 +53,7 @@ const Home = (props) => {
         if (step === 5) {
             setTimeout(() => {
                 props.value.setKosikPocet(props.value.kosikPocet + number);
+                props.value.setKosikCena(props.value.kosikCena + number * CENA);
             }, 1900);
         }
 
@@ -115,7 +107,7 @@ const Home = (props) => {
                         color: '#777',
                     }}
                 >
-                    Cena: 11€
+                    Cena: {CENA}€
                 </div>
 
                 <div

@@ -68,7 +68,7 @@ const Kosik = (props) => {
 
             {props.value.kosikPocet ? (
                 <div style={{ position: 'absolute' }} className="kosikPocet">
-                    {props.value.kosikPocet}
+                    {props.value.kosikCena} €
                 </div>
             ) : null}
 

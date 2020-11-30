@@ -30,7 +30,9 @@ class StackContextProvider extends Component {
             addNotification: this.addNotification,
             setOdoslat: this.setOdoslat,
             kosikPocet: 0,
+            kosikCena: 0,
             setKosikPocet: this.setKosikPocet,
+            setKosikCena: this.setKosikCena,
         };
     }
 
@@ -105,6 +107,11 @@ class StackContextProvider extends Component {
     setKosikPocet = (kosikPocet) => {
         this.setState({
             kosikPocet,
+        });
+    };
+    setKosikCena = (kosikCena) => {
+        this.setState({
+            kosikCena,
         });
     };
 
