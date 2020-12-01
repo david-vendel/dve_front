@@ -24,7 +24,6 @@ const App = () => {
                 </CookieConsent>
                 <Layout>
                     <Switch>
-                        <Route exact path="/" component={Home} />
                         <Route exact path="/kosik" component={KosikPage} />
                         <Route
                             exact
@@ -36,6 +35,7 @@ const App = () => {
                             path="/ochrana-osobnych-udajov"
                             component={OchranaOsobnychUdajov}
                         />
+                        <Route path="/" component={Home} />
                     </Switch>
                 </Layout>
             </Router>

@@ -2,6 +2,7 @@ import React from 'react';
 import Image from '../components/Image';
 import Button from '@material-ui/core/Button';
 import { withStackContext } from './../utils/StackProvider';
+import { Link } from 'react-router-dom';
 
 const CENA = 20;
 
@@ -98,7 +99,7 @@ const Home = (props) => {
             </div>
             <div className="homeInfo">
                 <div style={{ marginBottom: 20, fontSize: 25 }}>
-                    Obrázok Dve Bodky: Mâm radšej teba
+                    Obrázok Dve Bodky: Mám radšej teba
                 </div>
                 <div
                     style={{
@@ -157,10 +158,18 @@ const Home = (props) => {
                         onClick={() => {
                             startBuyProcess();
                         }}
+                        disabled={number === 0}
                     >
                         Kúpiť
                     </Button>
                 </div>
+                {props.value.kosikPocet ? (
+                    <div>
+                        <Link to="/kosik" className="legalneVeci">
+                            Prejsť do košíka
+                        </Link>
+                    </div>
+                ) : null}
             </div>
         </div>
     );

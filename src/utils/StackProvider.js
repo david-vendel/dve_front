@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { localStorageService } from './../storage/LocalStorageService.ts';
 
 export const StackContext = React.createContext({ value: { stack: [] } });
 
@@ -29,8 +30,16 @@ class StackContextProvider extends Component {
             setYKosik: this.setYKosik,
             addNotification: this.addNotification,
             setOdoslat: this.setOdoslat,
-            kosikPocet: 0,
-            kosikCena: 0,
+            kosikPocet: parseInt(
+                localStorageService.get('KOSIK_POCET')
+                    ? localStorageService.get('KOSIK_POCET')
+                    : 0
+            ),
+            kosikCena: parseInt(
+                localStorageService.get('KOSIK_CENA')
+                    ? localStorageService.get('KOSIK_CENA')
+                    : 0
+            ),
             setKosikPocet: this.setKosikPocet,
             setKosikCena: this.setKosikCena,
         };
@@ -105,11 +114,15 @@ class StackContextProvider extends Component {
         });
     };
     setKosikPocet = (kosikPocet) => {
+        localStorageService.set('KOSIK_POCET', kosikPocet);
+
         this.setState({
             kosikPocet,
         });
     };
     setKosikCena = (kosikCena) => {
+        localStorageService.set('KOSIK_CENA', kosikCena);
+
         this.setState({
             kosikCena,
         });
