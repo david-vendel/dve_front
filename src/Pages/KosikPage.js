@@ -22,73 +22,77 @@ const KosikPage = (props) => {
     };
 
     return (
-        <>
-            <div>
-                <h1>Tvoja objednávka</h1>
-            </div>
-            <div>
+        <div className="home">
+            <div className="homeInfo">
                 <div>
-                    <h3>
-                        {props.value.kosikPocet}x Obrázok Dve Bodky: Mám radšej
-                        teba {props.value.kosikCena}€
-                    </h3>
+                    <h1>Tvoja objednávka</h1>
                 </div>
-
-                <div
-                    style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        height: 65,
-                    }}
-                >
-                    <Button
-                        variant="contained"
-                        onClick={() =>
-                            changeKosikPocet(
-                                Math.max(0, props.value.kosikPocet - 1)
-                            )
-                        }
-                        style={{
-                            padding: 5,
-                            minWidth: 40,
-                        }}
-                    >
-                        -
-                    </Button>
-                    <span
-                        style={{
-                            fontSize: 30,
-                            padding: 10,
-                        }}
-                    >
-                        {props.value.kosikPocet}
-                    </span>
-                    <Button
-                        variant="contained"
-                        onClick={() =>
-                            changeKosikPocet(props.value.kosikPocet + 1)
-                        }
-                        style={{ padding: 5, minWidth: 40 }}
-                    >
-                        +
-                    </Button>
+                <div>
+                    <div>
+                        <h3>
+                            {props.value.kosikPocet}x Obrázok Dve Bodky: Mám
+                            radšej teba {props.value.kosikCena}€
+                        </h3>
+                    </div>
 
                     <div
                         style={{
-                            marginLeft: 10,
-                            marginTop: 3,
-                            cursor: 'pointer',
-                        }}
-                        title="Odstrániť"
-                        onClick={() => {
-                            changeKosikPocet(0);
+                            display: 'flex',
+                            alignItems: 'center',
+                            height: 65,
                         }}
                     >
-                        <DeleteIcon style={{ color: '#999' }} />
+                        <Button
+                            variant="contained"
+                            onClick={() =>
+                                changeKosikPocet(
+                                    Math.max(0, props.value.kosikPocet - 1)
+                                )
+                            }
+                            style={{
+                                padding: 5,
+                                minWidth: 40,
+                            }}
+                        >
+                            -
+                        </Button>
+                        <span
+                            style={{
+                                fontSize: 30,
+                                padding: 10,
+                            }}
+                        >
+                            {props.value.kosikPocet}
+                        </span>
+                        <Button
+                            variant="contained"
+                            onClick={() =>
+                                changeKosikPocet(props.value.kosikPocet + 1)
+                            }
+                            style={{ padding: 5, minWidth: 40 }}
+                        >
+                            +
+                        </Button>
+
+                        <div
+                            style={{
+                                marginLeft: 10,
+                                marginTop: 3,
+                                cursor: 'pointer',
+                            }}
+                            title="Odstrániť"
+                            onClick={() => {
+                                changeKosikPocet(0);
+                            }}
+                        >
+                            <DeleteIcon style={{ color: '#999' }} />
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <Form
+            <div className="homeImage">
+                {/* <Form
                     className={'form'}
                     defaultValues={{ name: 'meno' }}
                     validationSchema={FORM_VALIDATION}
@@ -97,9 +101,9 @@ const KosikPage = (props) => {
                     }}
                 >
                     <InputTextHookForm name="name" label={'name'} />
-                </Form>
+                </Form> */}
             </div>
-        </>
+        </div>
     );
 };
 
