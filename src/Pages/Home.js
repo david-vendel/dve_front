@@ -1,7 +1,9 @@
 import React from 'react';
 import Image from '../components/Image';
 import Button from '@material-ui/core/Button';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
 import { withStackContext } from './../utils/StackProvider';
+import { createMuiTheme, Menu, withStyles } from '@material-ui/core/styles';
 
 const Home = (props) => {
     const imageRef = React.createRef();
@@ -95,6 +97,11 @@ const Home = (props) => {
         }, 7100);
     };
 
+    const [ramcekColor, setRamcekColor] = React.useState()
+    const handleSelectChange = (event) => {
+        setRamcekColor(event.target.style.backgroundColor)
+    }
+    
     return (
         <div className="home">
             <div
@@ -102,15 +109,27 @@ const Home = (props) => {
                 className="homeImage"
                 ref={imageRef}
             >
-                <Image kupit={kupit} vrch={vrch} obrazok={obrazok} />
+                <Image kupit={kupit} vrch={vrch} obrazok={obrazok} ramcekColor={ramcekColor}/>
             </div>
             <div className="homeInfo">
                 <div style={{ marginBottom: 20, fontSize: 25 }}>
                     Obrázok Dve Bodky: Mâm radšej teba
                 </div>
+                <div style={{ fontSize: 20 }}>
+                    Farba rámčeka
+                </div>
+
+                <ButtonGroup variant="contained" style={{ marginTop: 10 }}>
+                    <Button style={{ backgroundColor: '#664126' }} onClick={handleSelectChange}></Button>
+                    <Button style={{ backgroundColor: '#2f6534' }} onClick={handleSelectChange}></Button>
+                    <Button style={{ backgroundColor: '#760300' }} onClick={handleSelectChange}></Button>
+                    <Button style={{ backgroundColor: '#000000' }} onClick={handleSelectChange}></Button>
+                </ButtonGroup>
+
                 <div
                     style={{
                         marginBottom: 20,
+                        marginTop: 20,
                         fontSize: 20,
                         color: '#777',
                     }}

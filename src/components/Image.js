@@ -2,7 +2,7 @@ import React from 'react';
 import ObalkaSpodok from './ObalkaSpodok';
 import Vrch from '../components/Vrch';
 
-const Image = ({ kupit, vrch, obrazok }) => {
+const Image = ({ kupit, vrch, obrazok, ramcekColor }) => {
     const [opacity, setOpacity] = React.useState(1);
 
     // React.useEffect(() => {
@@ -18,7 +18,7 @@ const Image = ({ kupit, vrch, obrazok }) => {
     //     }
     // }, [poslat]);
 
-    console.log('image', kupit, vrch);
+    //console.log('image', kupit, vrch);
     // if (hidden === 'hidden') {
     //     return null;
     // }
@@ -43,6 +43,7 @@ const Image = ({ kupit, vrch, obrazok }) => {
                     // top: 0,
                     // right: 0,
                     boxShadow: '5px 10px #888888',
+                    backgroundColor: `${ramcekColor}`
                 }}
             >
                 <div
