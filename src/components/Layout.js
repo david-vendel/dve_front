@@ -5,11 +5,14 @@ import Kosik from './Kosik';
 import Footer from './Footer';
 import { Link } from 'react-router-dom';
 import Snow from './Snow';
+import Headline from './Headline';
+// import url('http://davidvendel.com/css/animation.css');
 
 const Layout = ({ children }) => {
     return (
         <>
             <Obalka />
+            <Headline />
             <div className="content">
                 <div>
                     <div
